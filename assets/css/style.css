@@ -1,0 +1,834 @@
+/* Base Style CSS Start */
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Exo 2", serif;
+  font-family: "Roboto", serif;
+  background: #0e102c;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.primary__btn a,
+.section__tag span,
+.form__submit__btn button {
+  position: relative;
+  font-family: "Exo 2", serif;
+  font-size: 16px;
+  padding: 12px 40px;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(27, 200, 218, 0.8) 0%,
+    rgba(88, 37, 121, 0.8) 100%
+  );
+  box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.07) inset;
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+}
+
+.primary__btn a::after,
+.section__tag span::after,
+.form__submit__btn button::after {
+  position: absolute;
+  content: "";
+  top: -6px;
+  left: -5px;
+  width: 106%;
+  height: 126%;
+  border-radius: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Base Style CSS End */
+
+/* Header Part CSS Start */
+
+nav.navbar {
+  padding: 20px 0;
+  z-index: 999;
+}
+
+.navbar__container {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12.5px);
+  border: 1px solid rgba(215, 60, 190, 0.5);
+  border-radius: 60px;
+}
+
+.nav-link,
+.nav-link:hover,
+.nav-link:focus {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding: 0 15px !important;
+}
+
+.navbar-nav .nav-link.show {
+  color: #ffffff;
+}
+
+.dropdown-menu {
+  background: #0e102c;
+}
+
+.navbar-expand-xl .navbar-nav .dropdown-menu {
+  top: 35px;
+}
+
+.dropdown-item {
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.navbar-toggler {
+  border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.toggler-icon {
+  width: 25px;
+  height: 2px;
+  background-color: #e74c3c;
+  display: block;
+  transition: all 0.2s;
+}
+
+.middle-bar {
+  margin: 5px auto;
+}
+
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: #ffffff;
+}
+
+.nav-buttons img {
+  width: 20px;
+}
+
+@media (max-width: 1200px) {
+  .navbar__container {
+    border-radius: 0;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar-nav {
+    padding-top: 20px;
+  }
+
+  .navbar-nav.ml-auto {
+    padding-bottom: 50px;
+  }
+
+  .nav-link {
+    padding: 10px 0 !important;
+  }
+
+  .nav-link.dropdown-toggle {
+    padding: 10px 0 !important;
+  }
+}
+
+/* Hero Section CSS Start */
+
+.hero__wrapper {
+  position: relative;
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  margin-top: -117px;
+}
+
+.hero__wrapper::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 114px;
+  background: linear-gradient(0deg, #0e102c 0%, rgba(14, 16, 44, 0) 100%);
+}
+
+.hero__content {
+  max-width: 523px;
+}
+
+.hero__content h1 {
+  font-family: "Exo 2", serif;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 112.5%;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.hero__content h1 span {
+  color: #c437af;
+}
+
+.hero__content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 162.5%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero__btn {
+  padding-top: 40px;
+}
+
+.bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 110vh;
+  object-fit: cover;
+}
+
+/* Hero Section CSS End */
+
+/* Header Part CSS End */
+
+/* Main Part CSS Start */
+
+/* About Us Section CSS Start */
+
+.about__wrapper {
+  padding: 150px 0;
+}
+
+.about__content h2 {
+  font-family: "Exo 2", serif;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 115.385%;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 35px 0 25px;
+  margin-bottom: 0;
+}
+
+.about__content h2 span {
+  background: linear-gradient(
+    90deg,
+    rgba(147, 83, 245, 0.8) 0.17%,
+    rgba(27, 200, 218, 0.8) 53.67%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about__content p {
+  font-size: 18px;
+  line-height: 144.444%;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+.about__shape1 {
+  position: absolute;
+  top: 13%;
+  left: 9%;
+}
+
+.about__shape1 img {
+  width: 62px;
+  transform: rotate(45deg);
+}
+
+.about__shape2 {
+  position: absolute;
+  top: 18%;
+  right: 11%;
+}
+
+.about__shape2 img {
+  width: 35px;
+  transform: rotate(-45deg);
+  filter: blur(2px);
+}
+
+.about__shape3 {
+  position: absolute;
+  left: 6%;
+  bottom: 0;
+}
+
+.about__shape3 img {
+  width: 92px;
+  transform: rotate(-45deg);
+  filter: blur(2px);
+}
+
+.about__shape4 {
+  position: absolute;
+  right: 6%;
+  bottom: 0;
+}
+
+.about__shape4 img {
+  width: 62px;
+  transform: rotate(45deg);
+}
+
+/* About Us Section CSS End */
+
+/* Vison Mission Section CSS Start */
+
+.vision-mission__wrapper {
+  position: relative;
+  background: url(../images/vision-mission-bg.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 150px 0;
+}
+
+.vision-mission__wrapper::before,
+.contact__wrapper::before,
+.vision-mission__wrapper::after,
+.contact__wrapper::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 210px;
+  background: linear-gradient(0deg, #0e102c 0%, rgba(14, 16, 44, 0) 100%);
+}
+
+.vision-mission__wrapper::before,
+.contact__wrapper::before {
+  top: 0;
+  background: linear-gradient(0deg, rgba(14, 16, 44, 0) 0%, #0e102c 100%);
+}
+
+.vision-mission__wrapper::after,
+.contact__wrapper::after {
+  bottom: 0;
+}
+
+.vision-mission__content {
+  position: relative;
+}
+
+.vision-mission__content h2 {
+  font-family: "Exo 2", serif;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.vision-mission__content p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 144.444%;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+/* Vison Mission Section CSS End */
+
+/* Service Section CSS Start */
+
+.services__wrapper {
+  padding: 120px 0;
+}
+
+.services__top {
+  max-width: 820px;
+  margin: auto;
+  text-align: center;
+}
+
+.services__top h2 {
+  font-family: "Exo 2", serif;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 115.385%;
+  text-transform: capitalize;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 30px;
+}
+
+.services__top h2 span {
+  background: linear-gradient(
+    90deg,
+    rgba(147, 83, 245, 0.8) 14.87%,
+    rgba(27, 200, 218, 0.8) 85.87%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services__tag span::after {
+  width: 108%;
+}
+
+.service__container {
+  padding-top: 60px;
+}
+
+.services__content h3 {
+  font-family: "Exo 2", serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 120%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.services__content p,
+.services__content ul li {
+  font-size: 18px;
+  line-height: 144.444%;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+.services__content ul {
+  padding-left: 30px;
+}
+
+.services__content ul li {
+  list-style: inherit;
+  padding-top: 4px;
+}
+
+.services__img img {
+  max-width: 423px;
+}
+
+.services__gif {
+  position: absolute;
+  top: -1%;
+  right: 9%;
+  width: 82%;
+  z-index: -1;
+}
+
+.services__gif.rotate {
+  transform: rotate(180deg);
+}
+
+.services__gif.rotate {
+  left: -15%;
+}
+
+/* Service Section CSS End */
+
+/* FAQ Section CSS Start */
+
+.faq__content {
+  position: relative;
+}
+
+.faq__content h2 {
+  font-family: "Exo 2", serif;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 121.429%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.accordion-item {
+  position: relative;
+  margin: 30px 0;
+  padding: 20px 25px !important;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(22px);
+  border-radius: 30px !important;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.accordion-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  padding: 1px;
+  background: linear-gradient(90deg, #2d667e, #4d317f);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  font-family: "Exo 2", serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid transparent !important;
+}
+
+.accordion-button:focus,
+.accordion-button:not(.collapsed):focus {
+  box-shadow: none;
+  border: none;
+}
+
+.accordion-button::after {
+  background-image: url(../images/chevron-down.svg);
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../images/chevron-up.svg);
+  transform: rotate(0deg);
+}
+
+.accordion-body {
+  padding: 0;
+  padding-top: 20px;
+}
+
+.accordion-body p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* FAQ Section CSS End */
+
+/* Industries Section CSS Start */
+
+.industries__wrapper {
+  padding: 120px 0;
+}
+
+.industries__top {
+  max-width: 1050px;
+  margin: auto;
+  text-align: center;
+}
+
+.industries__top h2 {
+  font-family: "Exo 2", serif;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 115.385%;
+  text-transform: capitalize;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 30px;
+}
+
+.industries__top h2 span {
+  background: linear-gradient(
+    90deg,
+    rgba(147, 83, 245, 0.8) 14.87%,
+    rgba(27, 200, 218, 0.8) 85.87%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.industries__top p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+.industries__card {
+  height: 100%;
+  border: 0.862px solid #256377;
+  border-radius: 10px;
+}
+
+.industries__card-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.industries__card-content {
+  padding: 14px;
+  /* border: 0.862px solid #256377;
+  border-top: none;
+  border-radius: 0px 0px 10px 10px; */
+}
+
+.industries__card-content h5 {
+  font-family: "Exo 2", serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #c437af;
+  margin-bottom: 5px;
+}
+
+.industries__card-content p {
+  font-size: 16px;
+  line-height: 162.5%;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+/* Industries Section CSS End */
+
+/* Contact Section CSS Start */
+
+.contact__wrapper {
+  position: relative;
+  background: url(../images/contact-us-bg.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 120px 0;
+}
+
+.contact__img,
+.contact__form__container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact__form-content h2 {
+  font-family: "Exo 2", serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+}
+
+.contact__form-content p {
+  font-size: 16px;
+  line-height: 162.5%;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+.contact__form {
+  padding-top: 50px;
+}
+
+.form__input__filed,
+.form__textarea__field {
+  margin-bottom: 25px;
+}
+
+.form__input__filed input,
+.form__textarea__field textarea {
+  width: 100%;
+  color: #ffffff;
+  background: transparent;
+  padding: 5px 10px 10px;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+
+.form__input__filed input:focus,
+.form__textarea__field textarea:focus {
+  outline: 0;
+}
+
+.contact__form ::placeholder {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Contact Section CSS End */
+
+/* Main Part CSS End */
+
+/* Footer Part CSS Start */
+
+.footer__wrapper {
+  position: relative;
+  background: url(../images/footer-bg.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 70px 0 20px;
+  margin-top: 120px;
+}
+
+.footer__wrapper::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 210px;
+  background: linear-gradient(0deg, rgba(14, 16, 44, 0) 0%, #0e102c 100%);
+}
+
+.footer__container {
+  position: relative;
+  z-index: 1;
+}
+
+.footer__logo {
+  padding-bottom: 25px;
+}
+
+.footer__content {
+  padding-top: 80px;
+}
+
+.footer-contact {
+  padding-bottom: 30px;
+}
+
+.footer-contact h4 {
+  font-family: "Exo 2", serif;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-contact a,
+.footer-contact p {
+  font-size: 18px;
+  color: #c437af;
+  margin-bottom: 0;
+}
+
+.footer__nav h4 {
+  font-family: "Exo 2", serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.footer__menu li {
+  padding: 7px 0;
+}
+
+.footer__menu li img {
+  padding-right: 16px;
+}
+
+.footer__menu li a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.footer__copyright {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12.5px);
+  border-radius: 60px !important;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.footer__copyright::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 60px;
+  padding: 1px;
+  background: linear-gradient(360deg, #317387, #3f1f58);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.footer__copyright p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  padding: 20px 0;
+  margin-bottom: 0;
+}
+
+.footer__copyright p span {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* Footer Part CSS End */
